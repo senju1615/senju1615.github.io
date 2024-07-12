@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>proyecto cliente</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  
+  <link rel="shortcun icon" href="img/dieta.png">
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <link rel="stylesheet" href="/css/estilos.css">
+</head>
+
+
+
+<header class=" cabecera" id="inicio">
+
+  <body>
+
+ 
+
+
+    <!--Esto sirve para la fecha y la hora-->
+    <main class="Fechayh">
+      <p><em>La hora actual es: </em><time id="reloj"></time></p>
+
+      <script>
+        function actualizarReloj() {
+          const ahora = new Date();
+          const hora = ahora.toLocaleTimeString();
+          document.getElementById("reloj").textContent = hora;
+        }
+
+        setInterval(actualizarReloj, 1000); // Actualiza cada segundo
+      </script>
+      <p><em>Hoy es</em> <time id="currentDate"></time>.</p>
+      <script>const currentDateElement = document.getElementById("currentDate");
+        const currentDate = new Date();
+        currentDateElement.textContent = currentDate.toLocaleDateString();</script>
+    </main>
+
+    <!--este es el menu de navegacion -->
+
+
+    <img src="/img/menu_FILL0_wght400_GRAD0_opsz24.svg" alt="" class="menu">
+    <nav class="menu-navegacion">
+      <a href="#inicio">inicio</a>
+      <a href="#Conoce">Conoce</a>
+      <a href="#galeria">Recomendacion de alimentos</a>
+      <a href="#recomend">puntos infalibles</a>
+      <a href="#Contacto">contactos</a>
+      <a href="indice.html">IMC</a>
+      <a href="Nueva carpeta/index.html">clima</a>
+         <!--sin internet-->
+    <button class="btn btn-light" onclick="alerta()">error de carga</button>
+    <script type=text/javascript>
+       function alerta() {
+        Swal.fire({
+        title: "sin conexion",
+        text: "debe conectarse",
+        icon: "question"
+      });
+      }
+</script>
+    </nav>
+
+    <!--Esto es la primer seccion de la pagina e imagen-->
+    <div class="contenedor head">
+      <h1 class="titulo"><em>Alimentacion balanceada</em></h1>
+      <p class="subtitulo">Cuida tu organismo</p>
+    </div>
+</header>
+<!--Esto es la segunda seccion y informacion-->
+<main>
+  <section class="contenedor service" id="Conoce">
+    <h2 class="subtitulox">Conoce como cuidar tu organismo</h2>
+    <div class="contenedor-servicio">
+
+      <img src="img/body_care_0jl80tvxko99.svg" alt="fruta" width="300" height="300">
+
+      <div class="checklist-servicio">
+        <div class="service">
+          <h3 class="n-service"><span class="numero">1</span>habitos</h3>
+          <p><img src="img/f68d85a4c85f2240c77ac9117368cbe6.jpg" alt="" height="150" width=" 150">
+            <strong>1. Desayunar:</strong>se dice que el desayuno es el alimento más importante del día ya que de esto
+            depende que se
+            cuente con la energía necesaria para comenzar nuestras actividades diarias, lo ideal es desayunar no más
+            de 45 minutos después a haberse levantado y por su puesto antes de iniciar labores en el trabajo, la
+            escuela, entre otros.
+            <br><br>
+            <strong>2. Comer despacio y masticar bien los alimentos:</strong> algunas personas están acostumbradas a
+            ingerir sus
+            alimentos de manera muy rápida y sin disfrutarlos, tal vez porque tienen prisa cuando están comiendo o
+            simplemente porque así lo hacen, es importante hacerlo con calma ya que además de que saboreamos más cada
+            alimento que comemos, tendremos una mejor digestión y nos ayuda a saciarnos más rápido con menor cantidad
+            de comida.
+            <br><br>
+            <strong>3. Consume al menos 4 raciones de frutas y verduras al día:</strong> estos alimentos aportan
+            micronutrientes muy
+            importantes para nuestro cuerpo, como fibra, vitaminas y minerales, los cuales son necesarios para llevar
+            a cabo todas las funciones de nuestro cuerpo para conservar nuestra salud. Incorpóralas enteras y de
+            preferencia crudas o escalfadas a tus colaciones, guisos, guarniciones, etc.
+            <br><br>
+            <strong> 4. Beber agua natural:</strong> un alto porcentaje de nuestro cuerpo está compuesto por agua;
+            esta es vital para
+            mantener y llevar a cabo funciones vitales como respirar, eliminar desechos, realizar la digestión de los
+            alimentos, entre otros. La cantidad de consumo podría variar dependiendo a cada cuerpo y a la actividad
+            que se realice, pero aproximadamente se recomienda tomar de uno y medio a dos litros por día.
+            <br><br>
+            <strong>5. Evitar el consumo de alimentos fritos:</strong> tal vez estos alimentos te parezcan muy
+            apetecibles, sin embargo
+            son muy dañinos, ya que las grasas que contienen están oxidadas, lo que puede contribuir a un incremento
+            de altos niveles del colesterol malo (LDL) y radicales libres en nuestro cuerpo.
+
+          </p>
+        </div>
+        <div class="service">
+          <h3 class="n-service"><span class="numero">2</span>principales alimentos</h3>
+          <p><img src="img/OIP.jpg" alt="" height="150" width=" 150">
+            <strong>Verduras y hortalizas.</strong> Al menos dos raciones de verduras y hortalizas al día, procurando
+            que una sea en
+            crudo.
+            <br><br>
+            <strong>Fruta variada</strong>
+            Fruta. Tres piezas de fruta al día, preferentemente con piel.
+            <br><br>
+            <strong>Cereales</strong>
+            Cereales. Diariamente, ya sea en forma de pan, pasta, arroz, etc., y es preferible que sean integrales.
+            <br><br>
+            <strong>Aceite de oliva</strong>
+            Aceite de oliva. Diariamente tanto para cocinar como para aliñar y es preferible que sea virgen extra.
+            <br><br>
+            <strong>Consumir frutos secos con frecuencia</strong>
+            Legumbres y frutos secos. Cada uno de ellos al menos tres veces por semana.
+            <br><br>
+            <strong>Pescado y marisco</strong>
+            Pescados y mariscos. Al menos tres raciones por semana, una de ellas en forma de pescado azul.
+            <br><br>
+            <strong> Huevos</strong>
+            Huevos. Tres o cuatro huevos a la semana.
+            <br><br>
+            <strong>Lácteos</strong>
+            Lácteos. Dos o tres veces al día en forma de vaso de leche, yogures, quallada, quefir, formatges ...
+            <br><br>
+            <strong>Reducir el consumo de carne</strong>
+            Carnes rojas (ternera, cerdo, cordero, potro, buey...). Su consumo se limita a una vez a la semana.
+            <br><br>
+            <strong>Pata de pollo</strong>
+            Carnes blancas (pollo, pavo y conejo). Tres o cuatro veces a la semana.
+            <br><br>
+            <strong>Embutido y pastelería tachados</strong>
+            Evitar las carnes procesadas, los embutidos, los snacks, bollería y pastelería, las bebidas azucaradas
+            como refrescos y zumos comerciales, los platos precocinados, las grasas como mantequilla, nata, margarina,
+            etc.
+
+          </p>
+        </div>
+        <div class="service">
+          <h3 class="n-service"><span class="numero">3</span>como fomentarla</h3>
+          <p><img src="img/VEBA_2022-03-30_How-to-Encourage-Healthy-Eating-for-Children.jpg" alt="" height="150"
+              width=" 150">
+            <strong>1.</strong> Preparar los alimentos saludables de modo que estén listos para agarrar y comer. Es
+            decir, dejar la
+            fruta ya partida y las verduras cocinadas desde un día antes para que resulten aperitivos atractivos
+            cuando se sienta un antojo.
+            <br><br>
+            <strong>2.</strong> Ponerlos a la vista. Se deben colocar en el centro del mostrador de la cocina y a la
+            altura de los ojos
+            dentro del refrigerador, no escondidos en una estantería o en una esquina oscura de la nevera.
+            <br><br>
+            <strong>3.</strong> Hacerlos más atractivos. Al igual que sucede en las tiendas con los dulces, los
+            alimentos saludables
+            deben tener una presentación que invite a comerlos. Se puede optar por comprar un bol de fruta visualmente
+            atractivo, por ejemplo.
+            <br><br>
+            <strong>4.</strong> Hacer que la comida saludable se convierta en algo habitual. Esto puede implicar tomar
+            medidas como el
+            hecho de acostumbrarse a servir una verdura en cada comida, o cortar fruta en trozos para el desayuno
+            todos los días.
+            <br><br>
+            <strong>5.</strong> Incluirlos en la lista del súper. Al momento de ir por las compras al supermercado, se
+            debe acostumbrar
+            llenar la mitad del carrito con fruta y verdura, tal y como se recomienda que se haga con el plato de cada
+            comida.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+
+  <section class="gallery" id="galeria">
+    <div class="contenedor">
+      <h2 class="subtitulox">Recomendacion de alimentos</h2>
+      <div class="contenedor-galeria">
+        <img src="img/arroz.jpg" class="img-galeria" alt="arroz con cebolla, zanahoria y cebollin">
+        <img src="img/burger.jpg" class="img-galeria" alt="">
+        <img src="img/calabaza.jpg" class="img-galeria" alt="">
+        <img src="img/carne.jpg" class="img-galeria" alt="">
+        <img src="img/macarrones.jpg" class="img-galeria" alt="">
+        <img src="img/moron.jpg" class="img-galeria" alt="">
+      </div>
+    </div>
+  </section>
+
+  <section class="imagen-light">
+    <img src="" alt="" class="close">
+    <img src="" alt="" class="agregar-imagen">
+  </section>
+
+  <section class="contenedor" id="recomend">
+    <h2 class="subtitulox">Puntos infalibles</h2>
+    <section class="planetas">
+      <div class="contenido-planetas">
+        <img src="img/vaso.jpg" alt="">
+        <h3 class="n-planetas">Beber agua</h3>
+      </div>
+      <div class="contenido-planetas">
+        <img src="img/domirrr.jpg" alt="">
+        <h3 class="n-planetas">Dormir</h3>
+      </div>
+      <div class="contenido-planetas">
+        <img src="img/ejercicio.jpg" alt="">
+        <h3 class="n-planetas">Ejercitarse</h3>
+      </div>
+    </section>
+  </section>
+
+</main>
+
+<footer>
+  <div class="contacto" id="Contacto">
+    <h2 class="brand">Realizado por: Miguel Sánchez Díaz</h2>
+    <p>Proyecto realizado para la clase de programacion</p>
+  </div>
+  <div class="social-media">
+    <a href="www.facebook.com" class="social-media-icono">
+      <i class="bx bxl-facebook-circle"></i>
+    </a>
+    <a href="" class="social-media-icono">
+      <i class="bx bxl-twitter"></i>
+    </a>
+    <a href="" class="social-media-icono">
+      <i class="bx bxl-instagram"></i>
+    </a>
+  </div>
+
+</footer>
+
+<script src="js/galery.js"></script>
+<script src="js/menu.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+  integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+
+</body>
+
+</html>

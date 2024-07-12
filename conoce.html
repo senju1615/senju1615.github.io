@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/estilos.css">
+    <title>otra</title>
+</head>
+<body>
+    <main class="Fechayh">
+        <p><em>La hora actual es: </em><time id="reloj"></time></p>
+  
+        <script>
+          function actualizarReloj() {
+            const ahora = new Date();
+            const hora = ahora.toLocaleTimeString();
+            document.getElementById("reloj").textContent = hora;
+          }
+  
+          setInterval(actualizarReloj, 1000); // Actualiza cada segundo
+        </script>
+        <p><em>Hoy es</em> <time id="currentDate"></time>.</p>
+        <script>const currentDateElement = document.getElementById("currentDate");
+          const currentDate = new Date();
+          currentDateElement.textContent = currentDate.toLocaleDateString();</script>
+      </main>
+
+<button>
+      <a href="/index.html">pag principal</a></button>
+</body>
+</html>
